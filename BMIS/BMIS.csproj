@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D814A79B-2098-486C-B874-8D107E748A7E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BMIS</RootNamespace>
+    <AssemblyName>BMIS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbcon.cs" />
+    <Compile Include="dbconstring.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBlotter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBlotter.Designer.cs">
+      <DependentUpon>frmBlotter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\frmDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\frmDocument.Designer.cs">
+      <DependentUpon>frmDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\frmBuildingPermit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\frmBuildingPermit.Designer.cs">
+      <DependentUpon>frmBuildingPermit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHouseHold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHouseHold.Designer.cs">
+      <DependentUpon>frmHouseHold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIssue.Designer.cs">
+      <DependentUpon>frmIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaintenance.Designer.cs">
+      <DependentUpon>frmMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOfficials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOfficials.Designer.cs">
+      <DependentUpon>frmOfficials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPayment.Designer.cs">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPaymentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPaymentList.Designer.cs">
+      <DependentUpon>frmPaymentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\frmPrintBrgyClearance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\frmPrintBrgyClearance.Designer.cs">
+      <DependentUpon>frmPrintBrgyClearance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\frmPrintBusiness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\frmPrintBusiness.Designer.cs">
+      <DependentUpon>frmPrintBusiness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPurok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPurok.Designer.cs">
+      <DependentUpon>frmPurok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmResident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResident.Designer.cs">
+      <DependentUpon>frmResident.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmResidentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResidentList.Designer.cs">
+      <DependentUpon>frmResidentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVaccination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVaccination.Designer.cs">
+      <DependentUpon>frmVaccination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewHouseHold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewHouseHold.Designer.cs">
+      <DependentUpon>frmViewHouseHold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="var.cs" />
+    <EmbeddedResource Include="Documents\frmPrintBrgyClearance.resx">
+      <DependentUpon>frmPrintBrgyClearance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\rptBuilding.rdlc" />
+    <EmbeddedResource Include="Documents\rptClearance.rdlc" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBlotter.resx">
+      <DependentUpon>frmBlotter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\frmDocument.resx">
+      <DependentUpon>frmDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\frmBuildingPermit.resx">
+      <DependentUpon>frmBuildingPermit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHouseHold.resx">
+      <DependentUpon>frmHouseHold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIssue.resx">
+      <DependentUpon>frmIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaintenance.resx">
+      <DependentUpon>frmMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOfficials.resx">
+      <DependentUpon>frmOfficials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPayment.resx">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPaymentList.resx">
+      <DependentUpon>frmPaymentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\frmPrintBusiness.resx">
+      <DependentUpon>frmPrintBusiness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPurok.resx">
+      <DependentUpon>frmPurok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResident.resx">
+      <DependentUpon>frmResident.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResidentList.resx">
+      <DependentUpon>frmResidentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVaccination.resx">
+      <DependentUpon>frmVaccination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewHouseHold.resx">
+      <DependentUpon>frmViewHouseHold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Documents\rptBusiness.rdlc" />
+    <EmbeddedResource Include="Documents\rptBlotter.rdlc" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
