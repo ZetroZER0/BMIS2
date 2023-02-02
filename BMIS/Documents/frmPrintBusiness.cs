@@ -42,7 +42,7 @@ namespace BMIS
                         cn.Close();
 
                         cn.Open();
-                        cm = new SqlCommand("insert into tblDocument(refno, type, details1, details2, details3, gdate, [user])values(@refno, @type, @details1, @details2, @details3, @gdate, @user)", cn);
+                        cm = new SqlCommand("insert into tblDocument (refno, type, details1, details2, details3, gdate, [user])values(@refno, @type, @details1, @details2, @details3, @gdate, @user)", cn);
                         cm.Parameters.AddWithValue("@refno", cboRefNo.Text);
                         cm.Parameters.AddWithValue("@type", "BARANGAY BUSINESS CLEARANCE");
                         cm.Parameters.AddWithValue("@details1", txtEstablishment.Text);
